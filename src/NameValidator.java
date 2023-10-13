@@ -2,7 +2,6 @@ import org.apache.commons.codec.language.Soundex;
 import org.apache.commons.text.similarity.LevenshteinDistance;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashSet;
@@ -134,8 +133,6 @@ public class NameValidator {
             stringBuilder.deleteCharAt(stringBuilder.length() - 1);
             reader.close();
             return stringBuilder.toString();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
