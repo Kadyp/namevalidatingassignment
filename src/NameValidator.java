@@ -16,8 +16,6 @@ public class NameValidator {
     private static final int MAX_EDIT_DISTANCE = 2;
     private static final LevenshteinDistance LEVENSHTEIN_DISTANCE = new LevenshteinDistance(MAX_EDIT_DISTANCE);
 
-    public NameValidator() { }
-
     public void validate(
             final String personNameInput,
             final String blacklistPathInput,
