@@ -33,9 +33,9 @@ public class NameValidator {
         Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
         for (String blackListedName: blacklistedNames) {
             Matcher matcher = pattern.matcher(blackListedName);
-            boolean exactMatch = matcher.matches(); // check if the line matches the input with any word order
-            boolean phoneticMatch = false; // check if the line matches the input with similar sound
-            boolean editDistanceMatch = false; // check if the line matches the input with similar spelling
+            boolean exactMatch = matcher.matches();
+            boolean phoneticMatch = false;
+            boolean editDistanceMatch = false;
 
             try {
                 String regex2 = "[^a-zA-Z]";
